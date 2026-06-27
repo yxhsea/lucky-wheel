@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎡 幸运大转盘</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎡</text></svg>">
+</head>
+<body>
+
+  <!-- 背景气泡 -->
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  <div class="container">
+    <div class="title">
+      <emoji>🎡</emoji> 幸运大转盘
+    </div>
+    <div class="subtitle">✨ 转一转，好运来 ✨</div>
+
+    <div class="wheel-wrapper">
+      <div class="pointer">👇</div>
+      <canvas id="wheelCanvas" width="380" height="380"></canvas>
+    </div>
+
+    <button class="spin-btn" id="spinBtn">🎯 抽一次</button>
+    <div class="remain">
+      今日剩余 <span id="remainCount">8</span> 次机会
+    </div>
+
+    <div class="history" id="historyList"></div>
+  </div>
+
+  <!-- 结果弹窗 -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card">
+      <div class="modal-emoji" id="modalEmoji">🎁</div>
+      <div class="modal-title">🎉 恭喜你获得</div>
+      <div class="modal-prize" id="modalPrize">神秘礼物</div>
+      <button class="modal-btn" id="modalBtn">再抽一次 ✨</button>
+    </div>
+  </div>
+
+  <!-- 纸屑 -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
